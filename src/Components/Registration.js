@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Navbar from './Navbar'
 import '../Components/css/Registration.css'
 
 export default class Registration extends Component {
@@ -43,7 +44,8 @@ export default class Registration extends Component {
         }
       )
       .then(response => {
-     console.log(response.data);
+    //  console.log(response);
+    this.props.history.push("/login");
       })
       .catch(error => {
         console.log("registration error", error);
@@ -54,6 +56,7 @@ export default class Registration extends Component {
   render() {
     return (
       <div className="wrapped">
+        <Navbar/>
         <form onSubmit={this.handleSubmit} className="form-edit">
         <input
             type="first_name"

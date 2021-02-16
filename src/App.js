@@ -2,59 +2,40 @@ import React, { Component } from 'react'
 import LandingPage from './Components/LandingPage'
 import Registration from './Components/Registration'
 import Login from './Components/Login';
+import Dashboard from './Components/Dashboard/Dashboard'
+import Logout from './Components/Logout'
 import {
-  BrowserRouter ,
+  BrowserRouter  as Router,
   Switch,
-  Route,Link
+  Route
 } from "react-router-dom";
+import PrivateRoute  from './Components/PrivateRoute';
+
+
+
 
 export default class App extends Component {
   render() {
     return (
      <div className="App">
+      
    
-           <BrowserRouter>
+           <Router >
 
 
-         
-         <nav className="navbar navbar-expand-lg  navbar-dark navbar-custom fixed-top">
-    <div className="container ">
-      <Link className="navbar-brand text-white" to="/">One Power</Link>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarResponsive">
-        <ul className="navbar-nav ml-auto">
-        
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/register">Register</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/login">Log In</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-white"  to="/logout">Log out</Link>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
 
 
           <Switch>
-            <Route exact path={"/"}>
-             <LandingPage/>
-             </Route>
-             <Route  path="/register">
-            <Registration/>
-          </Route>
-          <Route  path="/login">
-           <Login/>
-          </Route>
+            <Route exact path="/" component={LandingPage} />
+            <PrivateRoute component={Dashboard} path="/dashboard" />
+            <Route path="/register" component={Registration} />
+            <Route path="/login" component={Login} />
+            <Route path="/logout" component={Logout} />
           </Switch>
           
       
-       </BrowserRouter>  
+       </Router>  
      </div>
        
         

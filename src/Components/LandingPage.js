@@ -1,5 +1,5 @@
 import React from 'react'
-// import Navbar from './Navbar'
+import Navbar from './Navbar'
 
 
 
@@ -9,6 +9,7 @@ class LandingPage extends React.Component {
   
       return (
       <div>
+        <Navbar/>
                       
     
       <header className="masthead text-center text-white">

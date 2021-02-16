@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import { createBrowserHistory } from "history"
+
+// const history = createBrowserHistory({
+//   basename: process.env.PUBLIC_URL
+// })
+
+// const hist = history;
 
 ReactDOM.render(
   <React.StrictMode>
