@@ -21,11 +21,6 @@ export default class App extends Component {
       
    
            <Router >
-
-
-
-
-
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <PrivateRoute component={Dashboard} path="/dashboard" />

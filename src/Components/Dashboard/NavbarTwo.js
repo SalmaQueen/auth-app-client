@@ -33,7 +33,7 @@ export default class Navbar extends Component {
             <Link className="nav-link text-white" to="/dashboard/map">Map</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link text-white" to="/activities">Activities</Link>
+            <Link className="nav-link text-white" to="/dashboard/activities">Activities</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link text-white" to="/messages">Messages</Link>

@@ -2,6 +2,7 @@ import React from 'react'
 import 'leaflet/dist/leaflet.css';
 // import {icon} from 'leaflet'
 // import Navbar from './NavbarTwo'
+import Mark from './Mark'
 
 
 import { useMap,MapContainer,TileLayer,Marker, Popup, useMapEvents } from 'react-leaflet';
@@ -51,6 +52,7 @@ export default function MapDemo() {
 
 
   <LocationMarker/>
+  <Marker/>
 
 
       

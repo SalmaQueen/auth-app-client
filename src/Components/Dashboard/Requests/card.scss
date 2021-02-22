@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Nunito';
+}
+
+// body {
+//     background-color: rgb(37, 22, 22);
+// }
+
+.container {
+    display: flex;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    // margin-top: 0.5rem !important;
+    padding: 0 !important;
+}
+
+.profile-card {
+    position: relative;
+    width: 80%;
+    background-color: #FFF;
+    border-radius: .5rem;
+    overflow: hidden;
+    transition: all .25s ease;
+
+    &:hover {
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, .15);
+    }
+
+    .card-header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem;
+        color: #FFF;
+        background: linear-gradient(135deg,#3f5efb, #fc466b);
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #FFF;
+        }
+
+        .profile-name {
+            margin-top: .5rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .profile-role {
+            font-size: 1.05rem;
+            color: #DDD;
+        }
+
+        .profile-location {
+            // margin-top: .5rem;
+            // margin-bottom: 2rem;
+            font-size: 1.25rem;
+        }
+        
+        .divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        
+            svg {
+                position: relative;
+                display: block;
+                width: calc(150% + 1.5px);
+                height: 50px;
+                
+                path {
+                    fill: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    .card-body {
+        padding: 2rem;
+
+        .title {
+            color: #666;
+            margin-bottom: 0;
+            text-align: center;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .contact-list {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .contact-item {
+                width: 50px;
+                height: 50px;
+                padding: .75rem;
+                border-radius: .5rem;
+
+                &.facebook {
+                    background: linear-gradient(135deg, #00c6ff, #0072ff);
+                    box-shadow: 0px 5px 10px rgba(0, 198, 255, .5);
+                }
+                
+                &.twitter {
+                    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+                    box-shadow: 0px 5px 10px rgba(0, 210, 255, .5);
+                }
+                
+                &.instagram {
+                    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+                    box-shadow: 0px 5px 10px rgba(253, 29, 29, .5);
+                }
+
+                &.dribbble {
+                    background: linear-gradient(135deg, #da4453, #89216b);
+                    box-shadow: 0px 5px 10px rgba(218, 68, 83, .5);
+                }
+            }
+        }
+    }
+}
+
+.icon {
+    position: relative;
+    top: .25rem;
+    width: 1.25em;
+    height: 1.25em;
+
+    &.white {
+        path, polygon, rect {
+            fill: #FFF;
+        }
+    }
+}
+
+.contact-icon {
+    width: 100%;
+    height: 100%;
+
+    path {
+        fill: #FFF;
+    }
+}

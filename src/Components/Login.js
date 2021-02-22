@@ -47,10 +47,11 @@ const Login = () => {
     .post("http://localhost:3000/auth/signin", data)
     .then(
       (response) => {
-    
+        
         login(response.data.jwt)
         // localStorage.setItem("token", JSON.stringify(response.data.jwt));
-        // localStorage.setItem("user", JSON.stringify(data));
+        // localStorage.setItem("user", response.data)
+        // console.log(response)
        
         history.push("/dashboard");
         
@@ -60,6 +61,30 @@ const Login = () => {
       
       }
     );
+    // elbakuly@gmail.com
+
+
+  // axios.defaults.headers.common.Authorization =localStorage.getItem("token");
+
+  //  axios
+  //  .get("http://localhost:3000/auth/userdata")
+  //  .then(
+  //    (response) => {
+       
+  //     //  login(response.data.jwt)
+  //      // localStorage.setItem("token", JSON.stringify(response.data.jwt));
+  //     //  localStorage.setItem("user", response.data)
+  //      console.log(response)
+  //     //  console.log(response.data)
+      
+  //     //  history.push("/dashboard");
+       
+  //    },
+  //    (error) => {
+  //      console.log(error);
+     
+  //    }
+  //  );
 
   //   try {
   //     const response = await axios.post("http://localhost:3000/auth/signin", data)
