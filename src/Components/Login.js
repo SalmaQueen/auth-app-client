@@ -4,6 +4,7 @@ import {login} from '../utils/index'
 
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
+import './Login.scss'
 
 // import { UserContext } from 'react';
 
@@ -82,37 +83,37 @@ const Login = () => {
   
 
   return (
-    <div className="wrapped">
+    <>
       <Navbar/>
   
-      <form onSubmit={handleSubmit} className="form-edit">
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={email}
-          onChange={handleEmail}
-          required
-        />
-  
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={handlePassword}
-          required
-        />
-  
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  );
+   
+
+      <form onSubmit={handleSubmit} className="panel">
+          <div className="state">
+          <i className="fa fa-unlock-alt"></i>
+          <h1>Log in</h1>
+          </div>
+          <div className="form">
+          <input placeholder='Email' type="text" value={email}
+                onChange={handleEmail} required/>
+            <input placeholder='Password' type="text" value={password}
+                onChange={handlePassword}
+                required/>
+            <button type="submit" className="login">Login</button>
+          </div>
+          <div className="fack"><a href="#">
+            <i className="fa fa-question-circle">
+              </i>Forgot password?</a></div>
+        </form>
+    </>
+  )
 };
 
 export default Login;
 
 
+
+   
 
 
 

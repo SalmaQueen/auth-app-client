@@ -45,7 +45,7 @@ export default class Registration extends Component {
       )
       .then(response => {
     //  console.log(response);
-    this.props.history.push("/login");
+    this.props.history.push("/dashboard");
       })
       .catch(error => {
         console.log("registration error", error);
@@ -55,7 +55,7 @@ export default class Registration extends Component {
 
   render() {
     return (
-      <div className="wrapped">
+      <>
         <Navbar/>
         <form onSubmit={this.handleSubmit} className="form-edit">
         <input
@@ -103,7 +103,7 @@ export default class Registration extends Component {
 
           <button type="submit">Register</button>
         </form>
-      </div>
+      </>
     );
   }
 }
