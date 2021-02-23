@@ -1,8 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import axios from "axios";
-import '../../../Components/css/Registration.css'
-// import Navbar from '../NavbarTwo'
-
+import './Request.css'
 export default class Request extends Component {
   constructor(props) {
     super(props);
@@ -55,67 +53,71 @@ export default class Request extends Component {
       });
     event.preventDefault();
   }
-
   render() {
     return (
       <div className="wrapped">
-        {/* <Navbar/> */}
-        <form onSubmit={this.handleSubmit} className="form-edit">
+        <form className="form-edit">
+          <h1><b>Make A Request</b></h1>
+      
         <input
             type="title"
             name="title"
-            placeholder="title"
+            placeholder="Title"
             value={this.state.title}
             onChange={this.handleChange}
             required
           />
+         
            <input
             type="description"
             name="description"
-            placeholder="description"
+            placeholder="Description"
             value={this.state.description}
             onChange={this.handleChange}
             required
           />
+         
           <input
             type="status"
             name="status"
-            placeholder="status"
+            placeholder="Status"
             value={this.state.status}
             onChange={this.handleChange}
             required
           />
-
+       
           <input
             type="lng"
             name="lng"
-            placeholder="lng"
+            placeholder="Longtitude"
             value={this.state.lng}
             onChange={this.handleChange}
             required
           />
+          
            <input
             type="lat"
             name="lat"
-            placeholder="lat"
+            placeholder="Latitude"
             value={this.state.lat}
             onChange={this.handleChange}
             required
           />
-
+       
           <input
             type="type_of_request"
             name="type_of_request"
-            placeholder="type of request"
+            placeholder="Type of request"
             value={this.state.type_of_request}
             onChange={this.handleChange}
             required
           />
 
-          <button type="submit">submit</button>
-          
-        </form>
+        
+        <input className="btn btn-secondary" type="submit" value="Submit"/>
+    </form>
+        
       </div>
-    );
+    )
   }
 }

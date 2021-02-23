@@ -26,8 +26,7 @@ function LocationMarker() {
       
 
     <Marker position={position} >
-      <Popup>You are here!
-      </Popup>
+     
       
     </Marker>
   )
@@ -49,10 +48,10 @@ export default function MapDemo() {
 
   
 
-
+<Mark/>
 
   <LocationMarker/>
-  <Marker/>
+
 
 
       

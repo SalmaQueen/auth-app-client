@@ -21,7 +21,7 @@ export default class AllRequest extends Component {
     
     render() {
         return (
-            <div>
+            <div className="mt-5">
                 <ul>
                     {this.state.requests.map(request=>(
                         <div className="col-md-4  col-sm-12">

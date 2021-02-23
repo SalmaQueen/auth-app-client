@@ -12,7 +12,7 @@ export default class Navbar extends Component {
         return (
             <div>
             
-            <nav className="navbar navbar-expand-lg  navbar-dark navbar-custom fixed-top">
+            <nav className="navbar navbar-expand-lg  navbar-dark navbar-custom bg-dark fixed-top">
     <div className="container ">
       <Link className="navbar-brand text-white" to="/">One Power</Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

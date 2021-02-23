@@ -15,9 +15,9 @@ class LandingPage extends React.Component {
       <header className="masthead text-center text-white">
           <div className="masthead-content">
             <div className="container">
-              <h1 className="masthead-heading mb-0">One Power</h1>
+              {/* <h1 className="masthead-heading mb-0">One Power</h1> */}
               <h2 className="masthead-subheading mb-0">Just for you to serve your needs with volunteers</h2>
-              <a href="#" className="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+              {/* <a href="#" className="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a> */}
             </div>
           </div>
           <div className="bg-circle-1 bg-circle"></div>
