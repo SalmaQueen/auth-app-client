@@ -3,7 +3,7 @@ import LandingPage from './Components/LandingPage'
 import Registration from './Components/Registration'
 import Login from './Components/Login';
 import Dashboard from './Components/Dashboard/Dashboard'
-import Logout from './Components/Logout'
+
 import {
   BrowserRouter  as Router,
   Switch,
@@ -26,7 +26,7 @@ export default class App extends Component {
             <PrivateRoute component={Dashboard} path="/dashboard" />
             <Route path="/register" component={Registration} />
             <Route path="/login" component={Login} />
-            <Route path="/logout" component={Logout} />
+            
           </Switch>
           
       

@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
+export default function Navbar() {
+  const history = useHistory();
+  const handleLogout =()=> {
+    // e.preventDefault();
+    localStorage.removeItem("token"); 
+    history.push("/");
 
-export default class Navbar extends Component {
-
-  constructor(props){
-    super(props);
   }
-
-    render() {
-        return (
-            <div>
-            
-            <nav className="navbar navbar-expand-lg  navbar-dark navbar-custom bg-dark fixed-top">
+  return (
+    <div>
+      <nav className="navbar navbar-expand-lg  navbar-dark navbar-custom bg-dark fixed-top">
     <div className="container ">
       <Link className="navbar-brand text-white" to="/">One Power</Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,15 +38,15 @@ export default class Navbar extends Component {
           <li className="nav-item">
             <Link className="nav-link text-white" to="/messages">Messages</Link>
           </li>
-          
-          <li className="nav-item">
-            <Link className="nav-link text-white"  to="/logout">Log out</Link>
-          </li>
+          {/* <li className="nav-item">
+            <button className="nav-link text-white"  onClick={handleLogout}>Log out</button> 
+          </li> */}
         </ul>
       </div>
     </div>
   </nav>
-            </div>
-        )
-    }
+      
+    </div>
+  )
 }
+
